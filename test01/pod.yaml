@@ -4,7 +4,7 @@ metadata:
   name: nginx
   namespace: test01
   labels:
-    app: nginx
+    app: nginx-po
 spec:
   containers:
   - name: nginx
