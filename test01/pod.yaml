@@ -5,6 +5,11 @@ metadata:
   namespace: test01
 data:
   number_of_processes: "3"
+  file.properties: |
+    processes=3
+    application=test
+    port=8080
+    debug=FALSE
 ---
 apiVersion: v1
 kind: Pod
@@ -18,7 +23,7 @@ spec:
   - name: nginx
     image: nginx:1.25-alpine
     imagePullPolicy: IfNotPresent
-    workingDir: /var/log/nginx
+    workingDir: /config
     ports:
     - containerPort: 80
     resources:
@@ -36,3 +41,14 @@ spec:
         configMapKeyRef:
           key: number_of_processes
           name: nginx
+    volumeMounts:
+    - name: config
+      mountPath: /config
+      readOnly: true
+  volumes:
+  - name: config
+    configMap:
+      name: nginx
+      items:
+      - key: "file.properties"
+        path: "config.txt"
