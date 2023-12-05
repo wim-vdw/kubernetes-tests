@@ -1,4 +1,12 @@
 apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx
+  namespace: test01
+data:
+  number_of_processes: "3"
+---
+apiVersion: v1
 kind: Pod
 metadata:
   name: nginx
@@ -23,3 +31,8 @@ spec:
       value: frontend
     - name: ENVIRONMENT
       value: development
+    - name: NUMBER_OF_PROCESSES
+      valueFrom:
+        configMapKeyRef:
+          key: number_of_processes
+          name: nginx
