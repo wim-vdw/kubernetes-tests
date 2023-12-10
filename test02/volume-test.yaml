@@ -8,6 +8,9 @@ kind: Pod
 metadata:
   name: nginx
   namespace: test02
+  labels:
+    app: nginx
+    environment: development
 spec:
   volumes:
   - name: data
