@@ -17,7 +17,7 @@ spec:
     command:
     - sh
     - -c
-    - echo 'Welcome Wim' && sleep 600
+    - echo 'Welcome Wim' && sleep 3600
 ---
 apiVersion: apps/v1
 kind: Deployment
