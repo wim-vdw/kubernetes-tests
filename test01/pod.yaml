@@ -12,6 +12,14 @@ data:
     debug=FALSE
 ---
 apiVersion: v1
+kind: Secret
+metadata:
+  name: user-data
+data:
+  username: V2ltIFZhbiBkZW4gV3luYWdlcnQK
+  password: cGFzczEyMwo=
+---
+apiVersion: v1
 kind: Pod
 metadata:
   name: nginx
@@ -45,6 +53,16 @@ spec:
         configMapKeyRef:
           key: number_of_processes
           name: nginx
+    - name: SECRET_USERNAME
+      valueFrom:
+        secretKeyRef:
+          name: user-data
+          key: username
+    - name: SECRET_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: user-data
+          key: password
     volumeMounts:
     - name: config
       mountPath: /config
