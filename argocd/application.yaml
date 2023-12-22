@@ -14,4 +14,4 @@ spec:
     namespace: simple-app
   syncPolicy:
     syncOptions:
-    - CreateNameSpace=true
+    - CreateNamespace=true
