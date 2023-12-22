@@ -4,5 +4,9 @@ metadata:
   name: alpine
 spec:
   containers:
-    - name: alpine
-      image: wimvandenwyngaert/myalpine:1.0.0
+  - name: alpine
+    image: wimvandenwyngaert/myalpine:1.0.0
+    command:
+    - sh
+    - -c
+    - echo 'Welcome Wim' && sleep 3600
