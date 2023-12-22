@@ -19,3 +19,8 @@ spec:
         image: ealen/echo-server:0.8.12
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            memory: 100Mi
+          limits:
+            memory: 100Mi
