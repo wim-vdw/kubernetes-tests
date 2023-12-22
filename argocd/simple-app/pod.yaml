@@ -10,3 +10,8 @@ spec:
     - sh
     - -c
     - echo 'Welcome Wim' && sleep 3600
+    resources:
+      requests:
+        memory: 100Mi
+      limits:
+        memory: 100Mi
