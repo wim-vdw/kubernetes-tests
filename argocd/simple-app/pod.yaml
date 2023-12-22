@@ -9,4 +9,4 @@ spec:
     command:
     - sh
     - -c
-    - echo 'Welcome Wim' && sleep 3600
+    - echo 'Welcome Wim' && sleep 10
