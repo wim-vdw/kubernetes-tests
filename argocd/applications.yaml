@@ -24,6 +24,29 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: simple-app-acc
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  project: my-project
+  source:
+    repoURL: https://github.com/wim-vdw/kubernetes-tests.git
+    targetRevision: main
+    path: argocd/simple-app/overlays/acc
+  destination:
+    name: in-cluster
+    namespace: simple-app-acc
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: simple-app-prd
   namespace: argocd
   finalizers:
@@ -32,7 +55,7 @@ spec:
   project: my-project
   source:
     repoURL: https://github.com/wim-vdw/kubernetes-tests.git
-    targetRevision: HEAD
+    targetRevision: main
     path: argocd/simple-app/overlays/prd
   destination:
     name: in-cluster
