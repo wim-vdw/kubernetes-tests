@@ -9,4 +9,10 @@ patches:
     - op: replace
       path: /spec/containers/0/image
       value: wimvandenwyngaert/myalpine:1.0.2
+- target:
+    kind: Deployment
+  patch: |-
+    - op: replace
+      path: /spec/replicas
+      value: 3
 namePrefix: prd-
