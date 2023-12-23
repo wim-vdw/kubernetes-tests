@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: alpine
-    image: wimvandenwyngaert/myalpine:1.0.2
+    image: TO_OVERLAY
     command:
     - sh
     - -c
