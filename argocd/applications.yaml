@@ -9,7 +9,7 @@ spec:
   project: my-project
   source:
     repoURL: https://github.com/wim-vdw/kubernetes-tests.git
-    targetRevision: HEAD
+    targetRevision: main
     path: argocd/simple-app/overlays/dev
   destination:
     name: in-cluster
