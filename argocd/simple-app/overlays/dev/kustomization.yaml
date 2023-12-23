@@ -9,3 +9,4 @@ patches:
     - op: replace
       path: /spec/containers/0/image
       value: wimvandenwyngaert/myalpine:1.0.2
+namePrefix: dev-
