@@ -1,21 +1,4 @@
 apiVersion: argoproj.io/v1alpha1
-kind: AppProject
-metadata:
-  name: my-project
-  namespace: argocd
-spec:
-  clusterResourceWhitelist:
-  - group: '*'
-    kind: '*'
-  destinations:
-  - namespace: 'simple-app-dev'
-    name: 'in-cluster'
-  - namespace: 'simple-app-prd'
-    name: 'in-cluster'
-  sourceRepos:
-  - '*'
----
-apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: simple-app-dev
