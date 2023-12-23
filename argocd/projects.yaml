@@ -11,6 +11,8 @@ spec:
   destinations:
   - namespace: 'simple-app-dev'
     name: 'in-cluster'
+  - namespace: 'simple-app-acc'
+    name: 'in-cluster'
   - namespace: 'simple-app-prd'
     name: 'in-cluster'
   sourceRepos:
