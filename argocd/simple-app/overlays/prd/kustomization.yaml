@@ -8,5 +8,5 @@ patches:
   patch: |-
     - op: replace
       path: /spec/containers/0/image
-      value: wimvandenwyngaert/myalpine:1.0.1
+      value: wimvandenwyngaert/myalpine:1.0.2
 namePrefix: prd-
