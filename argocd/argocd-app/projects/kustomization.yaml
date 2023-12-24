@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
 - project1.yaml
 - project2.yaml
+- project3.yaml
