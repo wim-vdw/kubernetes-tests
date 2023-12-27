@@ -72,3 +72,8 @@ spec:
     automated:
       selfHeal: true
       prune: true
+  info:
+  - name: description
+    value: Test application
+  - name: author
+    value: Wim Van den Wyngaert
