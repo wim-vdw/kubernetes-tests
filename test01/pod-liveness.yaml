@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: liveness-test
+  namespace: test01
+  labels:
+    test: liveness
+spec:
+  containers:
+  - name: liveness
+    image: wimvandenwyngaert/myalpine:1.0.2
+    args:
+    - /bin/sh
+    - -c
+    - touch /tmp/healthy; sleep 15; rm -rf /tmp/healthy; sleep 600
+    livenessProbe:
+      exec:
+        command:
+        - cat
+        - /tmp/healthy
+      initialDelaySeconds: 10
+      failureThreshold: 1
+      periodSeconds: 3
