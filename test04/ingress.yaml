@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: virtual-host-ingress
+  namespace: test04
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: blue-app.local
+    http:
+      paths:
+      - backend:
+          service:
+            name: blue-svc
+            port:
+              number: 80
+        path: /
+        pathType: ImplementationSpecific
+  - host: green-app.local
+    http:
+      paths:
+      - backend:
+          service:
+            name: green-svc
+            port:
+              number: 80
+        path: /
+        pathType: ImplementationSpecific

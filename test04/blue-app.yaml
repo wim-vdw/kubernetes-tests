@@ -1,0 +1,68 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: blue-config
+  namespace: test04
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Blue application</title>
+        <style>
+            body {
+                width: 35em;
+                margin: 0 auto;
+                font-family: Tahoma, Verdana, Arial, sans-serif;
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+    <h1 style="text-align: center">Welcome to the Blue Application</h1>
+    </body>
+    </html>
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blue-dep
+  namespace: test04
+  labels:
+    app: blue-dep
+spec:
+  selector:
+    matchLabels:
+      run: blue-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: blue-app
+    spec:
+      volumes:
+      - name: app-config
+        configMap:
+          name: blue-config
+      containers:
+      - name: blue-server
+        image: nginx:1.25.3-alpine
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - mountPath: /usr/share/nginx/html
+          name: app-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: blue-svc
+  namespace: test04
+  labels:
+    app: blue-svc
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    run: blue-app
