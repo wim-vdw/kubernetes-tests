@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: nginx-ds
-  namespace: test01
   labels:
     app: nginx-ds
 spec:

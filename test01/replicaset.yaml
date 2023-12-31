@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: nginx-rs
-  namespace: test01
   labels:
     app: nginx-rs
 spec:
