@@ -6,7 +6,7 @@ resources:
 
 patches:
 - target:
-    kind: AppProject
+    kind: Application
   patch: |-
     - op: replace
       path: /metadata/name
