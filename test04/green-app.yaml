@@ -27,14 +27,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: green-dep
-  namespace: test04
   labels:
     app: green-dep
 spec:
   selector:
     matchLabels:
       run: green-app
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
@@ -57,7 +56,6 @@ apiVersion: v1
 kind: Service
 metadata:
   name: green-svc
-  namespace: test04
   labels:
     app: green-svc
 spec:
