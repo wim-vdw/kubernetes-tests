@@ -1,0 +1,41 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: simple-app
+  namespace: argocd
+spec:
+  description: Project for simple application
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: 'simple-app-dev'
+    name: 'in-cluster'
+  - namespace: 'simple-app-acc'
+    name: 'in-cluster'
+  - namespace: 'simple-app-prd'
+    name: 'in-cluster'
+  sourceRepos:
+  - '*'
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: tests
+  namespace: argocd
+spec:
+  description: Project for tests
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: 'test01'
+    name: 'in-cluster'
+  - namespace: 'test02'
+    name: 'in-cluster'
+  - namespace: 'test03'
+    name: 'in-cluster'
+  - namespace: 'test04'
+    name: 'in-cluster'
+  sourceRepos:
+  - '*'

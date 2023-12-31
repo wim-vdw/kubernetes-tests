@@ -1,17 +1,17 @@
 # Argo CD tests
 
-Create a new project and two applications in Argo CD:
+Create/onboard projects and applications in Argo CD:
 
 ```shell
-kubectl apply -f projects.yaml
-kubectl apply -f applications.yaml  
+kubectl apply -f seed-projects.yaml
+kubectl apply -f seed-simple-app.yaml  
 ```
 
-Cleanup Argo CD applications and project:
+Remove projects and applications from Argo CD:
 
 ```shell
-kubectl delete -f applications.yaml  
-kubectl delete -f projects.yaml
+kubectl delete -f seed-simple-app.yaml  
+kubectl delete -f seed-projects.yaml
 ```
 
 The application's Kubernetes resources that were under control by Argo CD will be deleted by Argo CD.
