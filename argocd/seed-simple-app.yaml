@@ -12,7 +12,7 @@ spec:
   source:
     repoURL: https://github.com/wim-vdw/kubernetes-tests.git
     targetRevision: main
-    path: argocd/simple-app/overlays/dev
+    path: simple-app/overlays/dev
   destination:
     name: in-cluster
     namespace: simple-app-dev
@@ -37,7 +37,7 @@ spec:
   source:
     repoURL: https://github.com/wim-vdw/kubernetes-tests.git
     targetRevision: main
-    path: argocd/simple-app/overlays/acc
+    path: simple-app/overlays/acc
   destination:
     name: in-cluster
     namespace: simple-app-acc
@@ -62,7 +62,7 @@ spec:
   source:
     repoURL: https://github.com/wim-vdw/kubernetes-tests.git
     targetRevision: main
-    path: argocd/simple-app/overlays/prd
+    path: simple-app/overlays/prd
   destination:
     name: in-cluster
     namespace: simple-app-prd
