@@ -2,7 +2,6 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: blue-config
-  namespace: test04
 data:
   index.html: |
     <!DOCTYPE html>
@@ -27,7 +26,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: blue-dep
-  namespace: test04
   labels:
     app: blue-dep
 spec:
@@ -57,7 +55,6 @@ apiVersion: v1
 kind: Service
 metadata:
   name: blue-svc
-  namespace: test04
   labels:
     app: blue-svc
 spec:
