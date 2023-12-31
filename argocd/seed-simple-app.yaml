@@ -8,7 +8,7 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
-  project: my-project
+  project: simple-app
   source:
     repoURL: https://github.com/wim-vdw/kubernetes-tests.git
     targetRevision: main
@@ -33,7 +33,7 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
-  project: my-project
+  project: simple-app
   source:
     repoURL: https://github.com/wim-vdw/kubernetes-tests.git
     targetRevision: main
@@ -58,7 +58,7 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
-  project: my-project
+  project: simple-app
   source:
     repoURL: https://github.com/wim-vdw/kubernetes-tests.git
     targetRevision: main
