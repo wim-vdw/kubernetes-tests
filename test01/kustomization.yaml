@@ -3,3 +3,8 @@ kind: Kustomization
 
 resources:
 - pod.yaml
+- pod-liveness.yaml
+- pod-readiness.yaml
+- replicaset.yaml
+- deployment.yaml
+- daemonset.yaml
