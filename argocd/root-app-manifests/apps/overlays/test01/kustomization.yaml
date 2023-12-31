@@ -21,5 +21,5 @@ patches:
       path: /spec/source/path
       value: test01
     - op: replace
-      path: /spec/destination
+      path: /spec/destination/namespace
       value: test01
