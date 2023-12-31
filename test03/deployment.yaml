@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo-dep
+  labels:
+    app: echo-dep
+spec:
+  selector:
+    matchLabels:
+      run: my-echo-server
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        run: my-echo-server
+    spec:
+      containers:
+      - name: echo-server
+        image: ealen/echo-server:0.8.12
+        ports:
+        - containerPort: 80
