@@ -8,3 +8,4 @@ resources:
 - apps/overlays/test02
 - apps/overlays/test03
 - apps/overlays/test04
+- apps/overlays/simple-app/dev
