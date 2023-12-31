@@ -5,3 +5,6 @@ resources:
 - projects/overlays/simple-app
 - projects/overlays/tests
 - apps/overlays/test01
+- apps/overlays/test02
+- apps/overlays/test03
+- apps/overlays/test04
