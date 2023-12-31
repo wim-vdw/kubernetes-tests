@@ -17,6 +17,8 @@ spec:
     name: in-cluster
     namespace: TO_OVERLAY
   syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
     automated:
       selfHeal: true
       prune: true
