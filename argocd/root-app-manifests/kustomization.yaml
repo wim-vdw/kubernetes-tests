@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
 - projects/overlays/simple-app
 - projects/overlays/tests
+- apps/overlays/test01
