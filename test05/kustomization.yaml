@@ -5,3 +5,4 @@ resources:
 - pod-reader-sa.yaml
 - pod-reader-role.yaml
 - pod-reader-role-binding.yaml
+- pod.yaml
