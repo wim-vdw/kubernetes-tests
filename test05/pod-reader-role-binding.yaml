@@ -5,6 +5,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: pod-reader-sa
+  namespace: test04
 roleRef:
   kind: Role
   name: pod-reader
