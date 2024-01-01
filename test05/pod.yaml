@@ -6,8 +6,7 @@ spec:
   containers:
   - name: alpine
     image: wimvandenwyngaert/myalpine:1.0.2
-    args:
+    command:
     - /bin/sh
     - -c
-    - sleep
-    - infinity
+    - sleep infinity
