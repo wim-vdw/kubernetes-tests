@@ -4,7 +4,7 @@ metadata:
   name: read-pods
 subjects:
 - kind: ServiceAccount
-  name: pod-reader-sax
+  name: pod-reader-sa
 roleRef:
   kind: Role
   name: pod-reader
