@@ -4,5 +4,5 @@ metadata:
   name: pod-reader
 rules:
 - apiGroups: [""]
-  resources: ["pods", "serviceaccounts"]
+  resources: ["pods"]
   verbs: ["get", "list"]
