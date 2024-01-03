@@ -5,6 +5,7 @@ metadata:
 spec:
   accessModes:
   - ReadWriteOnce
+  storageClassName: standard
   hostPath:
     path: /data/pv0001
   capacity:
