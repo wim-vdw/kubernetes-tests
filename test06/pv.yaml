@@ -9,4 +9,4 @@ spec:
   hostPath:
     path: /data/pv0001
   capacity:
-    storage: 1Gi
+    storage: 10Mi
