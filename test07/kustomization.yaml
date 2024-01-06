@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
 - crds.yaml
 - operator.yaml
+- cluster.yaml
