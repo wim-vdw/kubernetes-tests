@@ -19,3 +19,19 @@ spec:
   count: 1
   elasticsearchRef:
     name: quickstart
+  podTemplate:
+    spec:
+      containers:
+      - name: kibana
+        env:
+          - name: NODE_OPTIONS
+            value: "--max-old-space-size=512"
+        resources:
+          requests:
+            memory: 1Gi
+            cpu: 0.5
+          limits:
+            memory: 1Gi
+            cpu: 0.5
+      nodeSelector:
+        type: frontend
