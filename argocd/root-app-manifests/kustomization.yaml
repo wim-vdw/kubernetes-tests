@@ -10,6 +10,8 @@ resources:
 - apps/overlays/test04
 - apps/overlays/test05
 - apps/overlays/test06
+- apps/overlays/test07/part1
+- apps/overlays/test07/part2
 - apps/overlays/simple-app/dev
 - apps/overlays/simple-app/acc
 - apps/overlays/simple-app/prd
