@@ -12,6 +12,9 @@ patches:
       path: /metadata/name
       value: simple-app-acc
     - op: replace
+      path: /metadata/namespace
+      value: home
+    - op: replace
       path: /metadata/labels/env
       value: acceptance
     - op: replace
