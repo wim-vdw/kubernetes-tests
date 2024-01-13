@@ -31,3 +31,17 @@ metadata:
     app.kubernetes.io/part-of: argocd
 data:
   application.namespaces: "home"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-cm
+  namespace: argocd
+  labels:
+    app.kubernetes.io/name: argocd-cm
+    app.kubernetes.io/part-of: argocd
+data:
+  # add local user "wim" with apiKey and login capabilities
+  #   apiKey - allows generating API keys
+  #   login - allows to login using UI
+  accounts.wim: "apiKey, login"
