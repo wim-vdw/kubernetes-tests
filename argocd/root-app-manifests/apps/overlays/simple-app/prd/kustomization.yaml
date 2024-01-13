@@ -12,6 +12,9 @@ patches:
       path: /metadata/name
       value: simple-app-prd
     - op: replace
+      path: /metadata/namespace
+      value: home
+    - op: replace
       path: /metadata/labels/env
       value: production
     - op: replace
