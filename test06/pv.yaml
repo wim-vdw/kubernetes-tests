@@ -10,3 +10,5 @@ spec:
     path: /data/pv01
   capacity:
     storage: 1Gi
+  claimRef:
+    name: pvc-static-01
