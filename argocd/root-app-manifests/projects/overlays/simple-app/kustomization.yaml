@@ -16,4 +16,4 @@ patches:
       value: Project for simple application
     - op: add
       path: /spec/sourceNamespaces
-      value: ["home"]
+      value: ["home", "simple-apps"]
