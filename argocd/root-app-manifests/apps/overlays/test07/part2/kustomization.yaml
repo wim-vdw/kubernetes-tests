@@ -12,6 +12,9 @@ patches:
       path: /metadata/name
       value: test07-part2
     - op: replace
+      path: /metadata/namespace
+      value: test-apps
+    - op: replace
       path: /metadata/labels/env
       value: test
     - op: replace
