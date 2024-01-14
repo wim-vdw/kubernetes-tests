@@ -13,7 +13,7 @@ patches:
       value: simple-app-prd
     - op: replace
       path: /metadata/namespace
-      value: home
+      value: simple-apps
     - op: replace
       path: /metadata/labels/env
       value: production
