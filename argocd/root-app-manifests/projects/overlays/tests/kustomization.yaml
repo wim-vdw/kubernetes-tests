@@ -14,3 +14,6 @@ patches:
     - op: replace
       path: /spec/description
       value: Project for tests
+    - op: add
+      path: /spec/sourceNamespaces
+      value: ["test-apps"]
