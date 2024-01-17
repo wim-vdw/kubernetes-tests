@@ -4,3 +4,4 @@ kind: Kustomization
 helmCharts:
 - name: lenses
   repo: https://helm.repo.lenses.io
+  valuesFile: values.yaml
