@@ -7,6 +7,6 @@ helmGlobals:
 helmCharts:
 - name: mychart
   valuesInline:
-    containerName: alpine-container
+    containerName: alpinecontainer
     image:
       tag: "1.0.2"
