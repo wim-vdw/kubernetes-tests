@@ -1,0 +1,5 @@
+containerName: alpine
+
+image:
+  repository: wimvandenwyngaert/myalpine
+  tag: "1.0.0"

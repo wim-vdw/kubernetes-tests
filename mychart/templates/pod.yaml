@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-pod
+  labels:
+    app: test-pod
+spec:
+  containers:
+  - name: "{{ .Values.containerName}}"
+    image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+    command:
+    - sh
+    - -c
+    - echo 'Welcome Wim' && sleep 3600
