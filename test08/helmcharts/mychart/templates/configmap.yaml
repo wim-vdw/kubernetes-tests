@@ -6,3 +6,4 @@ data:
   myvalue: "Hello World"
   drink: {{ .Values.favoriteDrink | quote }}
   food: {{ .Values.favoriteFood | quote }}
+  car: {{ .Values.favoriteCar | quote }}

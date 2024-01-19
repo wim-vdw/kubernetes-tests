@@ -1,5 +1,6 @@
 favoriteDrink: coffee
 favoriteFood: pasta
+favoriteCar: BMW
 containerName: alpine
 
 image:
