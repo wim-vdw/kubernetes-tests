@@ -39,3 +39,8 @@ spec:
             configMapKeyRef:
               name: {{ .Chart.Name }}-configmap-2
               key: chartDescription
+        - name: RELOADER_TEST
+          valueFrom:
+            configMapKeyRef:
+              name: {{ .Chart.Name }}-configmap-2
+              key: reloaderTest
