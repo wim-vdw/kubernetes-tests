@@ -7,3 +7,10 @@ data:
   drink: {{ .Values.favoriteDrink | quote }}
   food: {{ .Values.favoriteFood | quote }}
   car: {{ .Values.favoriteCar | quote }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Chart.Name }}-configmap-2
+data:
+  chartName: {{ .Chart.Name | quote }}
