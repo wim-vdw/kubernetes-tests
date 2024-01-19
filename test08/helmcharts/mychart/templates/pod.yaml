@@ -12,3 +12,9 @@ spec:
     - sh
     - -c
     - echo 'Welcome Wim' && sleep 3600
+    env:
+    - name: CHART_NAME
+      valueFrom:
+        configMapKeyRef:
+          name: {{ .Chart.Name }}-configmap-2
+          key: chartName
