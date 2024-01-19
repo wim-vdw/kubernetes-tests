@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .Chart.Name }}-configmap
+  name: {{ .Chart.Name }}-configmap-1
 data:
   myvalue: "Hello World"
   drink: {{ .Values.favoriteDrink | quote }}
