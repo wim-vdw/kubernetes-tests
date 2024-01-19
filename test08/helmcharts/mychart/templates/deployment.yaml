@@ -24,3 +24,8 @@ spec:
             configMapKeyRef:
               name: {{ .Chart.Name }}-configmap-2
               key: chartName
+        - name: CHART_VERSION
+          valueFrom:
+            configMapKeyRef:
+              name: {{ .Chart.Name }}-configmap-2
+              key: chartVersion
