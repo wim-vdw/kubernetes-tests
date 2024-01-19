@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: helm-dep
+  annotations:
+    configmap.reloader.stakater.com/reload: {{ .Chart.Name }}-configmap-2
 spec:
   selector:
     matchLabels:
