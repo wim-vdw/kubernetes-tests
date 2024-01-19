@@ -16,3 +16,4 @@ data:
   chartName: {{ .Chart.Name | quote }}
   chartDescription: {{ .Chart.Description | quote }}
   chartVersion: {{ .Chart.Version | quote }}
+  chartAppVersion: {{ .Chart.AppVersion | quote }}
