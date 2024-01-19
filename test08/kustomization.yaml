@@ -5,7 +5,7 @@ helmGlobals:
   chartHome: helmcharts
 
 helmCharts:
-- name: mychart
+- name: simplechart
   valuesInline:
     favoriteDrink: wine
     favoriteFood: pure
