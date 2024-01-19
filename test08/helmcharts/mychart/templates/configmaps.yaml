@@ -14,3 +14,4 @@ metadata:
   name: {{ .Chart.Name }}-configmap-2
 data:
   chartName: {{ .Chart.Name | quote }}
+  test: {{ .Chart | quote }}
