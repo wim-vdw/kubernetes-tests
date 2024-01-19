@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helm-dep
+spec:
+  selector:
+    matchLabels:
+      app: helm-test
+  template:
+    metadata:
+      labels:
+        app: helm-test
+    spec:
+      containers:
+      - name: "{{ .Values.containerName}}"
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        command:
+        - sh
+        - -c
+        - echo 'Welcome Wim' && sleep infinity
+        env:
+        - name: CHART_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: {{ .Chart.Name }}-configmap-2
+              key: chartName
