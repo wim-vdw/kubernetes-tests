@@ -1,4 +1,5 @@
 favoriteDrink: coffee
+favoriteFood: pasta
 containerName: alpine
 
 image:
