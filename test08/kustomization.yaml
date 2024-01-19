@@ -8,6 +8,7 @@ helmCharts:
 - name: mychart
   valuesInline:
     favoriteDrink: wine
+    favoriteFood: pure
     containerName: alpine-container
     image:
       tag: "1.0.2"
