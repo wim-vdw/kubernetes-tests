@@ -17,4 +17,4 @@ data:
   chartDescription: {{ .Chart.Description | quote }}
   chartVersion: {{ .Chart.Version | quote }}
   chartAppVersion: {{ .Chart.AppVersion | quote }}
-  reloaderTest: "Value1"
+  reloaderTest: "Value2"
