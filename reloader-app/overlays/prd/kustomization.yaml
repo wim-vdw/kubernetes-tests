@@ -3,5 +3,3 @@ kind: Kustomization
 
 resources:
 - https://raw.githubusercontent.com/stakater/Reloader/v1.0.63/deployments/kubernetes/reloader.yaml
-
-namespace: reloader
