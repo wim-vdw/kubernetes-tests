@@ -21,6 +21,11 @@ spec:
         - -c
         - echo 'Welcome Wim' && sleep infinity
         env:
+        - name: FAVORITE_CAR
+          valueFrom:
+            configMapKeyRef:
+              name: {{ .Chart.Name }}-configmap-1
+              key: car
         - name: CHART_NAME
           valueFrom:
             configMapKeyRef:
