@@ -6,6 +6,3 @@ resources:
 
 patches:
 - path: configmaps.yaml
-- target:
-    kind: StatefulSet
-    name: argocd-application-controller
