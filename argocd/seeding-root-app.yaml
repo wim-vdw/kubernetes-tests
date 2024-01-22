@@ -20,29 +20,3 @@ spec:
     automated:
       selfHeal: true
       prune: true
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  namespace: argocd
-  name: argocd-cmd-params-cm
-  labels:
-    app.kubernetes.io/name: argocd-cmd-params-cm
-    app.kubernetes.io/part-of: argocd
-data:
-  application.namespaces: "test-apps, simple-apps"
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: argocd-cm
-  namespace: argocd
-  labels:
-    app.kubernetes.io/name: argocd-cm
-    app.kubernetes.io/part-of: argocd
-data:
-  # add local user "wim" with apiKey and login capabilities
-  #   apiKey - allows generating API keys
-  #   login - allows to login using UI
-  accounts.wim: "apiKey, login"
-  kustomize.buildOptions: "--enable-helm"

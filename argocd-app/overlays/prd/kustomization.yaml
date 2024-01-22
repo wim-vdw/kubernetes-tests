@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
 - https://raw.githubusercontent.com/argoproj/argo-cd/v2.9.5/manifests/install.yaml
+- configmaps.yaml
