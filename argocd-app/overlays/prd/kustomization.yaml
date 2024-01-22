@@ -5,11 +5,4 @@ resources:
 - https://raw.githubusercontent.com/argoproj/argo-cd/v2.9.5/manifests/install.yaml
 
 patches:
-- path: configmap1.yaml
-  target:
-    kind: ConfigMap
-    name: argocd-cmd-params-cm
-- path: configmap2.yaml
-  target:
-    kind: ConfigMap
-    name: argocd-cm
+- path: configmaps.yaml
