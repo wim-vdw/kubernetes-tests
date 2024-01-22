@@ -1,0 +1,34 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base
+
+patches:
+- target:
+    kind: Application
+  patch: |-
+    - op: replace
+      path: /metadata/name
+      value: argocd
+    - op: replace
+      path: /metadata/namespace
+      value: argocd
+    - op: replace
+      path: /metadata/labels/env
+      value: production
+    - op: replace
+      path: /spec/project
+      value: tests
+    - op: replace
+      path: /spec/source/path
+      value: argocd-app/overlays/prd
+    - op: replace
+      path: /spec/destination/namespace
+      value: argocd
+    - op: replace
+      path: /spec/syncPolicy/automated/selfHeal
+      value: false
+    - op: replace
+      path: /spec/syncPolicy/automated/prune
+      value: false
