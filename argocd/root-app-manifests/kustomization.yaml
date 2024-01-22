@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
 - projects/overlays/simple-app
 - projects/overlays/tests
+- apps/overlays/argocd-app
 - apps/overlays/reloader-app
 - apps/overlays/test01
 - apps/overlays/test02
