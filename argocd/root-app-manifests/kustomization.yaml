@@ -6,7 +6,6 @@ resources:
 - projects/overlays/tests
 - apps/overlays/argocd-app
 - apps/overlays/reloader-app
-- apps/overlays/guestbook-app
 - apps/overlays/test01
 - apps/overlays/test02
 - apps/overlays/test03
