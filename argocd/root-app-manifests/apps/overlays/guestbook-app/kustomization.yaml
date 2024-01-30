@@ -1,0 +1,28 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base
+
+patches:
+- target:
+    kind: Application
+  patch: |-
+    - op: replace
+      path: /metadata/name
+      value: guestbook
+    - op: replace
+      path: /metadata/namespace
+      value: test-apps
+    - op: replace
+      path: /metadata/labels/env
+      value: test
+    - op: replace
+      path: /spec/project
+      value: tests
+    - op: replace
+      path: /spec/source/path
+      value: guestbook-app
+    - op: replace
+      path: /spec/destination/namespace
+      value: guestbook
