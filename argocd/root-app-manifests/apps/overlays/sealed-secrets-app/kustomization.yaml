@@ -25,4 +25,4 @@ patches:
       value: sealed-secrets-app/overlays/prd
     - op: replace
       path: /spec/destination/namespace
-      value: kube-system
+      value: sealed-secrets
