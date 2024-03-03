@@ -18,5 +18,4 @@ spec:
     path: argocd/root-app-manifests
   syncPolicy:
     automated:
-      selfHeal: true
-      prune: true
+      selfHeal: false
