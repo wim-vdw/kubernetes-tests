@@ -26,9 +26,3 @@ patches:
     - op: replace
       path: /spec/destination/namespace
       value: argocd
-    - op: replace
-      path: /spec/syncPolicy/automated/selfHeal
-      value: false
-    - op: replace
-      path: /spec/syncPolicy/automated/prune
-      value: false
