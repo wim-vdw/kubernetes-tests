@@ -10,8 +10,8 @@ metadata:
 spec:
   project: tests
   source:
-    chart: external-secrets/external-secrets
-    repoURL: https://github.com/external-secrets/external-secrets
+    chart: external-secrets
+    repoURL: https://charts.external-secrets.io
     targetRevision: 0.9.13
     helm:
       releaseName: external-secrets
