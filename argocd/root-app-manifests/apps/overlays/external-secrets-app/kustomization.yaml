@@ -1,23 +1,5 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: external-secrets
-  labels:
-    env: production
-  namespace: test-apps
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
-spec:
-  project: tests
-  source:
-    chart: external-secrets
-    repoURL: https://github.com/external-secrets/external-secrets
-    targetRevision: 0.9.13
-    helm:
-      releaseName: external-secrets
-  destination:
-    name: in-cluster
-    namespace: external-secrets
-  syncPolicy:
-    syncOptions:
-    - CreateNamespace=true
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- app.yaml
