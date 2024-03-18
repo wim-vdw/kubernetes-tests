@@ -24,5 +24,14 @@ patches:
       path: /spec/source/path
       value: external-secrets-app/overlays/prd
     - op: replace
+      path: /spec/source/repoURL
+      value: https://charts.external-secrets.io
+    - op: add
+      path: /spec/source/targetRevision
+      value: 0.9.13
+    - op: add
+      path: /spec/source/helm/releaseName
+      value: exteral-secrets
+    - op: replace
       path: /spec/destination/namespace
       value: external-secrets
