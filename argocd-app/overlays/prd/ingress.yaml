@@ -4,8 +4,6 @@ metadata:
   name: virtual-host-ingress-argocd
   annotations:
     ingress.kubernetes.io/rewrite-target: /
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
 spec:
   ingressClassName: nginx
   rules:
@@ -18,4 +16,4 @@ spec:
           service:
             name: argocd-server
             port:
-              name: https
+              number: 80
