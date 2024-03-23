@@ -13,7 +13,7 @@ patches:
       value: wimvandenwyngaert/myalpine:2.0.0
     - op: replace
       path: /spec/template/spec/containers/0/ports/0/containerPort
-      value: "8080"
+      value: 8080
 - target:
     kind: Pod
   patch: |-
@@ -25,4 +25,4 @@ patches:
   patch: |-
     - op: replace
       path: /spec/ports/0/port
-      value: "8080"
+      value: 8080
