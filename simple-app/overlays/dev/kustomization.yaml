@@ -9,5 +9,5 @@ patches:
     kind: Deployment
   patch: |-
     - op: replace
-      path: /spec/containers/0/image
+      path: /spec/template/spec/containers/0/image
       value: wimvandenwyngaert/myalpine:2.0.0
