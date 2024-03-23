@@ -12,6 +12,12 @@ patches:
       path: /spec/template/spec/containers/0/image
       value: wimvandenwyngaert/myalpine:2.0.0
 - target:
+    kind: Pod
+  patch: |-
+    - op: replace
+      path: /spec/containers/0/image
+      value: wimvandenwyngaert/myalpine:2.0.0
+- target:
     kind: Service
   patch: |-
     - op: replace
