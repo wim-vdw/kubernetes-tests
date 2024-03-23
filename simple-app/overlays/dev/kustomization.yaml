@@ -6,7 +6,7 @@ resources:
 
 patches:
 - target:
-    kind: Pod
+    kind: Deployment
   patch: |-
     - op: replace
       path: /spec/containers/0/image
