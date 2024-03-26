@@ -8,6 +8,7 @@ resources:
 - apps/overlays/reloader-app
 - apps/overlays/sealed-secrets-app
 - apps/overlays/external-secrets-app
+- apps/overlays/longhorn-app
 - apps/overlays/test01
 - apps/overlays/test02
 - apps/overlays/test03
