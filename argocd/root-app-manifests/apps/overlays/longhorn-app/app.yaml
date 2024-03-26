@@ -10,7 +10,7 @@ metadata:
 spec:
   project: tests
   source:
-    chart: external-secrets
+    chart: longhorn
     repoURL: https://charts.longhorn.io/
     targetRevision: v1.6.0
     helm:
