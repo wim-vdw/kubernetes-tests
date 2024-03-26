@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: longhorn
+  labels:
+    env: production
+  namespace: test-apps
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  project: tests
+  source:
+    chart: external-secrets
+    repoURL: https://charts.longhorn.io/
+    targetRevision: v1.6.0
+    helm:
+      valuesObject:
+        preUpgradeChecker:
+          jobEnabled: false
+  destination:
+    name: in-cluster
+    namespace: longhorn
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true

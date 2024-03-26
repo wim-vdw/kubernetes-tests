@@ -2,27 +2,4 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- ../../base
-
-patches:
-- target:
-    kind: Application
-  patch: |-
-    - op: replace
-      path: /metadata/name
-      value: longhorn
-    - op: replace
-      path: /metadata/namespace
-      value: test-apps
-    - op: replace
-      path: /metadata/labels/env
-      value: production
-    - op: replace
-      path: /spec/project
-      value: tests
-    - op: replace
-      path: /spec/source/path
-      value: longhorn-app/overlays/prd
-    - op: replace
-      path: /spec/destination/namespace
-      value: longhorn
+- app.yaml
