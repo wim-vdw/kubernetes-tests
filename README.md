@@ -2,6 +2,8 @@
 
 ## Following fix was needed to ClusterRole argocd-server
 
+[Application in any namespace | Synced with NO resources deployed ](https://github.com/argoproj/argo-cd/issues/11638)
+
 ```bash
 kubectl edit ClusterRole argocd-server -n argocd
 - apiGroups:
