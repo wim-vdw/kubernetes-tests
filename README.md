@@ -1,5 +1,25 @@
 # Kubernetes tests
 
+## Following fix was needed to ClusterRole argocd-server
+
+```bash
+kubectl edit ClusterRole argocd-server -n argocd
+- apiGroups:
+  - argoproj.io
+  resources:
+  - applications
+  - applicationsets
+  - appprojects
+  verbs:
+  - create
+  - get
+  - list
+  - watch
+  - update
+  - delete
+  - patch
+```
+
 ## test05
 
 ```bash
