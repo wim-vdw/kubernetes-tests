@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../base
+
+patches:
+- path: patch-configmap.yaml
+  target:
+    kind: ConfigMap
+    name: myconfigmap
+  options:
+    allowNameChange: true
+- path: patch-pod.yaml
+  target:
+    kind: Pod
+    name: mypod

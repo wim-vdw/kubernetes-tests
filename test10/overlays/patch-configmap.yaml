@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myconfigmap-new-name
+data:
+  name: "Wim Van den Wyngaert"
+  city: "Antwerpen"
