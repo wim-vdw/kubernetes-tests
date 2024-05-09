@@ -44,3 +44,10 @@ Following has been tested:
 * additionalValuesFiles feature with helmCarts in Kustomize (version >=5.0.0 needed).
 * [kustomize/v5.0.0](https://github.com/kubernetes-sigs/kustomize/releases/tag/kustomize%2Fv5.0.0)
 * Reloader to perform rolling upgrade when ConfigMap data changes.
+
+## test10
+
+Test Kustomize Strategic Merging.  
+In the standard JSON merge patch, JSON objects are always merged **but lists are always replaced**. Often that isn't what we want.  
+To solve this problem, Strategic Merge Patch uses the go struct tag of the API objects to determine what lists should be
+merged and which ones should not.
