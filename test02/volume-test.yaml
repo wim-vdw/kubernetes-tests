@@ -21,7 +21,7 @@ spec:
     - mountPath: /usr/share/nginx/html
       name: data
   - name: alpine
-    image: wimvandenwyngaert/myalpine:1.0.2
+    image: wimvandenwyngaert/test:2.3
     command:
     - /bin/sh
     - -c

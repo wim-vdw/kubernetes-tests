@@ -10,4 +10,4 @@ patches:
   patch: |-
     - op: replace
       path: /spec/containers/0/image
-      value: wimvandenwyngaert/myalpine:1.0.2
+      value: wimvandenwyngaert/test:2.3
