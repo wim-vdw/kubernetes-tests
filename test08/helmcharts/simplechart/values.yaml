@@ -2,7 +2,7 @@ favoriteDrink: coffee
 favoriteFood: pasta
 favoriteCar: BMW
 containerName: alpine
-reloaderValue: Value1
+reloaderValue: Value2
 
 image:
   repository: wimvandenwyngaert/test
