@@ -25,4 +25,4 @@ patches:
       value: nfs-subdir-app/overlays/prd
     - op: replace
       path: /spec/destination/namespace
-      value: nfs-subdir
+      value: nfs-provisioner

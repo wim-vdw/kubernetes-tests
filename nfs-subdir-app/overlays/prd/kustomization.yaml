@@ -6,10 +6,10 @@ helmCharts:
   repo: https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner
   version: 4.0.18
   releaseName: nfs-subdir-external-provisioner
-  namespace: nfs-subdir
+  namespace: nfs-provisioner
   valuesInline:
     nfs:
       server: 192.168.1.5
       path: /mnt/nfsshare
 
-namespace: nfs-subdir
+namespace: nfs-provisioner
