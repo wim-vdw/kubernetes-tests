@@ -22,6 +22,7 @@ resources:
 - apps/overlays/test07/part2
 - apps/overlays/test08
 - apps/overlays/test09
+- apps/overlays/test11
 - apps/overlays/simple-app/dev
 - apps/overlays/simple-app/acc
 - apps/overlays/simple-app/prd
