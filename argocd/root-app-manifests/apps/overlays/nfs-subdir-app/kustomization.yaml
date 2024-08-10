@@ -2,4 +2,27 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- app.yaml
+- ../../base
+
+patches:
+- target:
+    kind: Application
+  patch: |-
+    - op: replace
+      path: /metadata/name
+      value: nfs-subdir
+    - op: replace
+      path: /metadata/namespace
+      value: test-apps
+    - op: replace
+      path: /metadata/labels/env
+      value: production
+    - op: replace
+      path: /spec/project
+      value: tests
+    - op: replace
+      path: /spec/source/path
+      value: nfs-subdir-app/overlays/prd
+    - op: replace
+      path: /spec/destination/namespace
+      value: nfs-subdir
