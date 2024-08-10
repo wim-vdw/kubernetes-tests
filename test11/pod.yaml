@@ -22,3 +22,28 @@ spec:
   - name: nfs-pvc-1
     persistentVolumeClaim:
       claimName: test-claim-1
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-pod-2-for-nfs-subdir
+  labels:
+    app: test-pod-2-for-nfs-subdir
+spec:
+  containers:
+  - name: alpine
+    image: wimvandenwyngaert/test:2.3
+    command:
+    - sh
+    - -c
+    - echo 'Welcome Wim' && sleep infinity
+    env:
+    - name: TZ
+      value: "Europe/Brussels"
+    volumeMounts:
+    - name: nfs-pvc-1
+      mountPath: "/mnt/nfs1"
+  volumes:
+  - name: nfs-pvc-1
+    persistentVolumeClaim:
+      claimName: test-claim-1
