@@ -11,8 +11,8 @@ spec:
   project: tests
   source:
     chart: nfs-subdir-external-provisioner
-    repoURL: https://kubernetes-sigs.github.io
-    targetRevision: 4.0.2
+    repoURL: https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner
+    targetRevision: 4.0.18
     helm:
       releaseName: nfs-subdir
   destination:
