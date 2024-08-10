@@ -7,5 +7,9 @@ helmCharts:
   version: 4.0.18
   releaseName: nfs-subdir-external-provisioner
   namespace: nfs-subdir
+  valuesInline:
+    nfs:
+      server: 192.168.1.5
+      path: /mnt/nfsshare
 
 namespace: nfs-subdir
