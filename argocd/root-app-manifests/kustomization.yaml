@@ -11,6 +11,7 @@ resources:
 - apps/overlays/external-secrets-app
 - apps/overlays/metallb-app
 - apps/overlays/longhorn-app
+- apps/overlays/nfs-subdir-app
 - apps/overlays/test01
 - apps/overlays/test02
 - apps/overlays/test03

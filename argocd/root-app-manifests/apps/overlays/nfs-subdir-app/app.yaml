@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nfs-subdir
+  labels:
+    env: production
+  namespace: test-apps
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  project: tests
+  source:
+    chart: nfs-subdir-external-provisioner
+    repoURL: https://kubernetes-sigs.github.io
+    targetRevision: 4.0.18
+    helm:
+      releaseName: nfs-subdir
+  destination:
+    name: in-cluster
+    namespace: nfs-provisioner
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
