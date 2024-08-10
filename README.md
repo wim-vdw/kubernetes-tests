@@ -48,6 +48,32 @@ Following has been tested:
 ## test10
 
 Test Kustomize Strategic Merging.  
-In the standard JSON merge patch, JSON objects are always merged **but lists are always replaced**. Often that isn't what we want.  
+In the standard JSON merge patch, JSON objects are always merged **but lists are always replaced**. Often that isn't
+what we want.  
 To solve this problem, Strategic Merge Patch uses the go struct tag of the API objects to determine what lists should be
 merged and which ones should not.
+
+## test11
+
+Test NFS subdir external provisioner using Raspberry Pi as NFS server to support dynamic provisioning of Kubernetes
+Persistent Volumes via Persistent Volume Claims.
+
+```bash
+# Install NFS server on Raspberry Pi
+sudo apt install nfs-common nfs-kernel-server -y
+
+# Create NFS share
+sudo mkdir -p /mnt/nfsshare
+
+# Add to /etc/exports
+sudo nano /etc/exports
+/mnt/nfsshare	192.168.1.0/24(rw,all_squash,insecure,async,no_subtree_check,anonuid=1000,anongid=1000)
+
+# Export and restart NFS server
+sudo exportfs -avr
+sudo systemctl restart nfs-kernel-server
+sudo systemctl status nfs-kernel-server
+
+# Mount on Mac OS (for test purposes)
+sudo mount -o vers=4,resvport -t nfs 192.168.1.5:/mnt/nfsshare /Users/wim/Downloads/nfsmount
+```
