@@ -11,5 +11,7 @@ helmCharts:
     nfs:
       server: 192.168.1.5
       path: /mnt/nfsshare
+    storageClass:
+      reclaimPolicy: Retain
 
 namespace: nfs-provisioner
