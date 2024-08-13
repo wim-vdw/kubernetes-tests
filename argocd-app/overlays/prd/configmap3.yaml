@@ -6,7 +6,7 @@ metadata:
 data:
   policy.default: ''
   policy.csv: |
-    p, role:test-role, applications, *, */*, allow
+    p, role:test-role, applications, get, */*, allow
     p, role:test-role, projects, get, *, allow
 
     g, wim, role:test-role
