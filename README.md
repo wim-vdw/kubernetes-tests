@@ -1,9 +1,32 @@
 # Kubernetes tests
 
+## Deploy ArgoCD and onboard rootapp (App Of Apps Pattern)
+
+Traefik is used as Ingress Controller.  
+ArgoCD endpoint will be available at: [http://argocd.127.0.0.1.sslip.io](http://argocd.127.0.0.1.sslip.io)  
+An app will also be created for ArgoCD itself during deploy, future upgrades of ArgoCD can then be done through
+ArgoCD.   
+The rootapp will initialize all ArgoCD projects and applications.
+
+```bash
+# Deploy ArgoCD.
+cd ./argocd-app/overlays/prd
+kubectl apply -k .
+
+# Onboard rootapp (App Of Apps Pattern).
+cd ./argocd
+kubectl apply -f seeding-root-app.yaml
+```
+
 ## Following fix was needed to ClusterRole argocd-server
 
 [Application in any namespace | Synced with NO resources deployed ](https://github.com/argoproj/argo-cd/issues/11638)  
 [Argo CD Security](https://argo-cd.readthedocs.io/en/stable/operator-manual/security/)
+
+This has been implemented in the ArgoCD app
+manifest: [argocd-app/overlays/prd/kustomization.yaml](argocd-app/overlays/prd/kustomization.yaml)
+
+Manual fix if needed:
 
 ```bash
 kubectl edit ClusterRole argocd-server -n argocd
