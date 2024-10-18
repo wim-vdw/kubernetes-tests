@@ -9,6 +9,6 @@ metadata:
 data:
   # add local user "wim" with apiKey and login capabilities
   #   apiKey - allows generating API keys
-  #   login - allows to login using UI
+  #   login - allows to log in using UI
   accounts.wim: "apiKey, login"
   kustomize.buildOptions: "--enable-helm"
