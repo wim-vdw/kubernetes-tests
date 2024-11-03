@@ -7,6 +7,7 @@ resources:
 - projects/overlays/tests
 #- apps/overlays/argocd-app
 - apps/overlays/reloader-app
+- apps/overlays/nginx-app
 - apps/overlays/sealed-secrets-app
 - apps/overlays/external-secrets-app
 - apps/overlays/metallb-app
