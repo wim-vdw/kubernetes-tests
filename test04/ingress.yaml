@@ -8,20 +8,40 @@ spec:
   - host: blue-app.local
     http:
       paths:
-      - backend:
+      - path: /
+        pathType: Prefix
+        backend:
           service:
             name: blue-svc
             port:
               number: 80
-        path: /
-        pathType: ImplementationSpecific
   - host: green-app.local
     http:
       paths:
-      - backend:
+      - path: /
+        pathType: Prefix
+        backend:
           service:
-            name: green-svc
+            name: blue-svc
             port:
               number: 80
-        path: /
-        pathType: ImplementationSpecific
+  - host: blue-app.127.0.0.1.sslip.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: blue-svc
+            port:
+              number: 80
+  - host: green-app.127.0.0.1.sslip.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: blue-svc
+            port:
+              number: 80
