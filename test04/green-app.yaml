@@ -4,9 +4,11 @@ metadata:
   name: green-config
 data:
   index.html: |
-    <!DOCTYPE html>
-    <html>
+    <!doctype html>
+    <html lang="">
     <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width"/>
         <title>Green application</title>
         <style>
             body {
@@ -14,6 +16,7 @@ data:
                 margin: 0 auto;
                 font-family: Tahoma, Verdana, Arial, sans-serif;
                 background-color: green;
+                color: white;
             }
         </style>
     </head>
