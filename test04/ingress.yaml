@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: virtual-host-ingress-test04
+  name: virtual-host-ingress-test04-production
 spec:
   ingressClassName: nginx
   rules:
@@ -36,6 +36,54 @@ spec:
             port:
               number: 80
   - host: prd-app.127.0.0.1.sslip.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: green-svc
+            port:
+              number: 80
+  - host: blue-app.127.0.0.1.sslip.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: blue-svc
+            port:
+              number: 80
+  - host: green-app.127.0.0.1.sslip.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: green-svc
+            port:
+              number: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: virtual-host-ingress-test04-blue-green
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: blue-app.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: blue-svc
+            port:
+              number: 80
+  - host: green-app.local
     http:
       paths:
       - path: /
