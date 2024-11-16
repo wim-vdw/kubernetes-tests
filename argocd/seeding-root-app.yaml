@@ -21,4 +21,4 @@ spec:
       selfHeal: true
       prune: true
     syncOptions:
-      - PruneLast=true
+    - PruneLast=true
