@@ -12,7 +12,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: green-svc
+            name: blue-svc
             port:
               number: 80
   - host: prd-app.127.0.0.1.sslip.io
@@ -22,7 +22,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: green-svc
+            name: blue-svc
             port:
               number: 80
 ---
