@@ -47,7 +47,7 @@ spec:
           name: blue-config
       containers:
       - name: blue-server
-        image: nginx:1.27.2-alpine
+        image: nginx:1.27.2-alpine-slim
         ports:
         - containerPort: 80
         volumeMounts:
