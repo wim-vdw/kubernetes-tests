@@ -3,7 +3,6 @@ kind: ConfigMap
 metadata:
   name: green-config
 data:
-  name.txt: "Wim"
   index.html: |
     <!doctype html>
     <html lang="">
