@@ -10,18 +10,7 @@ resources:
 - argocdapp.yaml
 
 patches:
-- path: configmap1.yaml
-  target:
-    kind: ConfigMap
-    name: argocd-cmd-params-cm
-- path: configmap2.yaml
-  target:
-    kind: ConfigMap
-    name: argocd-cm
-- path: configmap3.yaml
-  target:
-    kind: ConfigMap
-    name: argocd-rbac-cm
+- path: configmaps.yaml
 - patch: |-
     - op: add
       path: /rules/-
