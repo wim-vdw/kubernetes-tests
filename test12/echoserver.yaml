@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echoserver-dep
+  labels:
+    app: echoserver-dep
+spec:
+  selector:
+    matchLabels:
+      run: echoserver-app
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        run: echoserver-app
+    spec:
+      containers:
+      - name: echoserver
+        image: wimvandenwyngaert/echoserver:1.0.0
+        ports:
+        - containerPort: 8000
+        env:
+        - name: TZ
+          value: Europe/Brussels
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: echoserver-svc
+  labels:
+    app: echoserver-svc
+spec:
+  ports:
+  - port: 80
+    targetPort: 8000
+    protocol: TCP
+  selector:
+    run: echoserver-app
