@@ -4,6 +4,10 @@ metadata:
   name: test12-echoserver
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+    - vdww.duckdns.org
+    secretName: vdww-tls-secret
   rules:
   - host: echoserver-app.local
     http:
