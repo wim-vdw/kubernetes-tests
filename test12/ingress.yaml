@@ -4,10 +4,6 @@ metadata:
   name: test12-echoserver
 spec:
   ingressClassName: nginx
-  tls:
-  - hosts:
-    - vdww.duckdns.org
-    secretName: vdww-tls-secret
   rules:
   - host: echoserver-app.local
     http:
@@ -20,16 +16,6 @@ spec:
             port:
               number: 80
   - host: echoserver-app.127.0.0.1.sslip.io
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: echoserver-svc
-            port:
-              number: 80
-  - host: vdww.duckdns.org
     http:
       paths:
       - path: /
