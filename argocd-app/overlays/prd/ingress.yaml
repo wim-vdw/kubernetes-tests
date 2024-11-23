@@ -4,6 +4,10 @@ metadata:
   name: virtual-host-ingress-argocd
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+    - argocd-vdww.duckdns.org
+    secretName: argocd-vdww-tls-secret
   rules:
   - host: argocd.local
     http:
@@ -16,6 +20,16 @@ spec:
             port:
               number: 8080
   - host: argocd.127.0.0.1.sslip.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: argocd-server
+            port:
+              number: 8080
+  - host: argocd-vdww.duckdns.org
     http:
       paths:
       - path: /
