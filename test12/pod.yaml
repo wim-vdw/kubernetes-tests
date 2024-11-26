@@ -15,5 +15,5 @@ spec:
     env:
     - name: TZ
       value: "Europe/Brussels"
-    - name: ECHO_URL
+    - name: ECHOSERVER_URL
       value: "http://echoserver-svc:80"
