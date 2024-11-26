@@ -5,3 +5,4 @@ resources:
 - blue-app.yaml
 - green-app.yaml
 - ingress.yaml
+- pod.yaml
