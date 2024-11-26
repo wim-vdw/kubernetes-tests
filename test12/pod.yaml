@@ -17,3 +17,10 @@ spec:
       value: "Europe/Brussels"
     - name: ECHOSERVER_URL
       value: "http://echoserver-svc:80"
+    resources:
+      requests:
+        memory: "1Gi"
+        cpu: "500m"
+      limits:
+        memory: "1Gi"
+        cpu: "1"
