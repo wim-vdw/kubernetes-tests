@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
 - echoserver.yaml
 - ingress.yaml
+- pod.yaml
