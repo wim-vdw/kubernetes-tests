@@ -31,6 +31,8 @@ metadata:
   name: green-dep
   labels:
     app: green-dep
+  annotations:
+    configmap.reloader.stakater.com/reload: "green-config"
 spec:
   selector:
     matchLabels:

@@ -31,6 +31,8 @@ metadata:
   name: blue-dep
   labels:
     app: blue-dep
+  annotations:
+    configmap.reloader.stakater.com/reload: "blue-config"
 spec:
   selector:
     matchLabels:
