@@ -10,6 +10,7 @@ labels:
 - pairs:
     app.kubernetes.io/name: blue-green-app
     app.kubernetes.io/instance: blue-green
+    app.kubernetes.io/version: "1.0.0"
     app.kubernetes.io/component: website
     app.kubernetes.io/part-of: blue-green
-    app.kubernetes.io/managed-by: argocd
+    app.kubernetes.io/managed-by: ArgoCD
