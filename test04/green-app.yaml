@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: green-config
   labels:
-    app.kubernetes.io/name: blue-green-app
+    app.kubernetes.io/name: green-app
     app.kubernetes.io/instance: blue-green
     app.kubernetes.io/component: website
     app.kubernetes.io/part-of: blue-green
@@ -37,7 +37,7 @@ metadata:
   name: green-dep
   labels:
     app: green-dep
-    app.kubernetes.io/name:	blue-green-app
+    app.kubernetes.io/name:	green-app
     app.kubernetes.io/instance: blue-green
     app.kubernetes.io/component: website
     app.kubernetes.io/part-of: blue-green
@@ -73,7 +73,7 @@ metadata:
   name: green-svc
   labels:
     app: green-svc
-    app.kubernetes.io/name: blue-green-app
+    app.kubernetes.io/name: green-app
     app.kubernetes.io/instance: blue-green
     app.kubernetes.io/component: website
     app.kubernetes.io/part-of: blue-green

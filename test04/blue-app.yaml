@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: blue-config
   labels:
-    app.kubernetes.io/name: blue-green-app
+    app.kubernetes.io/name: blue-app
     app.kubernetes.io/instance: blue-green
     app.kubernetes.io/component: website
     app.kubernetes.io/part-of: blue-green
@@ -37,7 +37,7 @@ metadata:
   name: blue-dep
   labels:
     app: blue-dep
-    app.kubernetes.io/name: blue-green-app
+    app.kubernetes.io/name: blue-app
     app.kubernetes.io/instance: blue-green
     app.kubernetes.io/component: website
     app.kubernetes.io/part-of: blue-green
@@ -73,7 +73,7 @@ metadata:
   name: blue-svc
   labels:
     app: blue-svc
-    app.kubernetes.io/name: blue-green-app
+    app.kubernetes.io/name: blue-app
     app.kubernetes.io/instance: blue-green
     app.kubernetes.io/component: website
     app.kubernetes.io/part-of: blue-green
