@@ -31,6 +31,7 @@ metadata:
   name: green-dep
   labels:
     app: green-dep
+    app.kubernetes.io/name: green-app
   annotations:
     configmap.reloader.stakater.com/reload: "green-config"
 spec:
