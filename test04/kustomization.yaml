@@ -14,3 +14,4 @@ labels:
     app.kubernetes.io/component: website
     app.kubernetes.io/part-of: blue-green
     app.kubernetes.io/managed-by: ArgoCD
+  includeSelectors: true
