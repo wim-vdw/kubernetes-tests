@@ -7,7 +7,7 @@ spec:
   tls:
   - hosts:
     - argocd-vdww.duckdns.org
-    secretName: argocd-tls-secret
+    secretName: argocd-vdww-tls-secret
   rules:
   - host: argocd.local
     http:
