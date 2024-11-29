@@ -49,7 +49,7 @@ spec:
           name: green-config
       containers:
       - name: green-server
-        image: nginx:1.27.2-alpine-slim
+        image: nginx
         ports:
         - containerPort: 80
         volumeMounts:
