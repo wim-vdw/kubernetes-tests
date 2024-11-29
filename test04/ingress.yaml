@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: test04-production
   labels:
-    app.kubernetes.io/name: blue-green-app
+    app.kubernetes.io/name: prd-app
     app.kubernetes.io/instance: blue-green
     app.kubernetes.io/component: website
     app.kubernetes.io/part-of: blue-green
@@ -31,7 +31,7 @@ kind: Ingress
 metadata:
   name: test04-blue
   labels:
-    app.kubernetes.io/name: blue-green-app
+    app.kubernetes.io/name: blue-app
     app.kubernetes.io/instance: blue-green
     app.kubernetes.io/component: website
     app.kubernetes.io/part-of: blue-green
@@ -65,7 +65,7 @@ kind: Ingress
 metadata:
   name: test04-green
   labels:
-    app.kubernetes.io/name: blue-green-app
+    app.kubernetes.io/name: green-app
     app.kubernetes.io/instance: blue-green
     app.kubernetes.io/component: website
     app.kubernetes.io/part-of: blue-green
