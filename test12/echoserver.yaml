@@ -22,8 +22,6 @@ spec:
         env:
         - name: TZ
           value: Europe/Brussels
-      nodeSelector:
-        servertype: echo
 ---
 apiVersion: v1
 kind: Service
