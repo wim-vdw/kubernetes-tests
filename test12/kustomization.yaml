@@ -12,7 +12,7 @@ labels:
     app.kubernetes.io/name: echoserver
     app.kubernetes.io/instance: echoserver-instance01
     app.kubernetes.io/version: "1.0.0"
-    app.kubernetes.io/component: website
+    app.kubernetes.io/component: api
     app.kubernetes.io/part-of: echoserver
   includeTemplates: true
 
