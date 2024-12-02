@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: echoserver
-        image: wimvandenwyngaert/echoserver:1.1.0
+        image: wimvandenwyngaert/echoserver:1.2
         ports:
         - containerPort: 8000
         env:
