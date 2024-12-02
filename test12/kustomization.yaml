@@ -5,3 +5,11 @@ resources:
 - echoserver.yaml
 - ingress.yaml
 - pod.yaml
+
+labels:
+- pairs:
+    app.kubernetes.io/name: echoserver
+    app.kubernetes.io/instance: echoserver-instance01
+    app.kubernetes.io/version: "1.0.0"
+    app.kubernetes.io/component: website
+    app.kubernetes.io/part-of: echoserver
