@@ -2,14 +2,20 @@
 
 ## Deploy ArgoCD and onboard rootapp (App Of Apps Pattern)
 
-Traefik is used as Ingress Controller.  
-ArgoCD endpoint will be available at: [http://argocd.127.0.0.1.sslip.io](http://argocd.127.0.0.1.sslip.io)  
-An app will also be created for ArgoCD itself during deploy, future upgrades of ArgoCD can then be done through
-ArgoCD.   
-The rootapp will initialize all ArgoCD projects and applications.
+ArgoCD is deployed as an `Application`, this will allow us to perform future patching of ArgoCD via ArgoCD.
+
+The `rootapp` will initialize all ArgoCD projects and applications.
+
+Following controllers are part of the `core-apps` and will start synchronizing when `rootapp` gets applied:
+
+* `Ingress NGINX` controller for Kubernetes
+* `MetalLB` load-balancer implementation for bare metal Kubernetes clusters
+* `Reloader` controller to watch changes in Kubernetes ConfigMap and Secrets
+
+The rest of the applications are all tests and are manually synchronized.
 
 ```bash
-# Deploy ArgoCD.
+# Deploy ArgoCD including an "Application" to perform future patching of ArgoCD via ArgoCD.
 cd ./argocd-app/overlays/prd
 kubectl apply -k .
 
