@@ -5,6 +5,7 @@ resources:
 - namespaces.yaml
 - projects/overlays/simple-app
 - projects/overlays/tests
+- projects/overlays/core-app
 - apps/overlays/reloader-app
 - apps/overlays/nginx-app
 - apps/overlays/cert-manager-app
