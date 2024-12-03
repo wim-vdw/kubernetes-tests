@@ -3,5 +3,7 @@ kind: Kustomization
 
 resources:
 - github.com/metallb/metallb/config/native?ref=v0.14.8
+- ip-address-pool.yaml
+- l2-advertisement.yaml
 
 namespace: metallb-system
