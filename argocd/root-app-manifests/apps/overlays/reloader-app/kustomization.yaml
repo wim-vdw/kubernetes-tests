@@ -26,3 +26,8 @@ patches:
     - op: replace
       path: /spec/destination/namespace
       value: reloader
+    - op: add
+      path: /spec/syncPolicy/automated
+      value:
+        selfHeal: true
+        prune: true
