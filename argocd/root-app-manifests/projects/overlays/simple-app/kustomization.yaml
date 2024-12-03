@@ -13,7 +13,7 @@ patches:
       value: simple-app
     - op: replace
       path: /spec/description
-      value: Project for simple application
+      value: Project for simple applications
     - op: add
       path: /spec/sourceNamespaces
       value: ["simple-apps"]
