@@ -13,16 +13,21 @@ patches:
       value: nginx
     - op: replace
       path: /metadata/namespace
-      value: test-apps
+      value: core-apps
     - op: replace
       path: /metadata/labels/env
       value: production
     - op: replace
       path: /spec/project
-      value: tests
+      value: core-app
     - op: replace
       path: /spec/source/path
       value: nginx-app/overlays/prd
     - op: replace
       path: /spec/destination/namespace
       value: ingress-nginx
+    - op: add
+      path: /spec/syncPolicy/automated
+      value:
+        selfHeal: true
+        prune: true
