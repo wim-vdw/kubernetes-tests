@@ -10,7 +10,7 @@ Following controllers are part of the `core-apps` and will start synchronizing w
 
 * `Ingress NGINX` controller for Kubernetes
 * `MetalLB` load-balancer implementation for bare metal Kubernetes clusters
-* `Reloader` controller to watch changes in Kubernetes ConfigMap and Secrets
+* `Reloader` controller to watch changes in Kubernetes ConfigMaps and Secrets
 
 The rest of the applications are all tests and are manually synchronized.
 
