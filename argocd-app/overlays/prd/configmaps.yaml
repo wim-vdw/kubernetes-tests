@@ -22,6 +22,7 @@ data:
   #   login - allows to log in using UI
   accounts.wim: "apiKey, login"
   kustomize.buildOptions: "--enable-helm"
+  exec.enabled: "true"
 ---
 apiVersion: v1
 kind: ConfigMap
