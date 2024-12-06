@@ -23,6 +23,7 @@ data:
   accounts.wim: "apiKey, login"
   kustomize.buildOptions: "--enable-helm"
   exec.enabled: "true"
+  statusbadge.enabled: "true"
 ---
 apiVersion: v1
 kind: ConfigMap
