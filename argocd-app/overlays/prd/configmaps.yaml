@@ -22,6 +22,10 @@ data:
   #   login - allows to log in using UI
   accounts.wim: "apiKey, login"
   kustomize.buildOptions: "--enable-helm"
+  ui.bannercontent: "Banner message linked to a URL"
+  ui.bannerurl: "https://argo-cd.readthedocs.io/en/stable/operator-manual/custom-styles/"
+  ui.bannerpermanent: "true"
+  ui.bannerposition: "both"
 ---
 apiVersion: v1
 kind: ConfigMap
