@@ -1,6 +1,6 @@
 # Kubernetes tests
 
-## Deploy Argo CD and onboard rootapp (App Of Apps Pattern)
+## Deploy Argo CD and onboard rootapp (App Of Apps Pattern) - deprecated
 
 This section has been deprecated and replaced by three new git repositories:
 
