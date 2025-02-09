@@ -1,10 +1,20 @@
 # Kubernetes tests
 
-## Deploy ArgoCD and onboard rootapp (App Of Apps Pattern)
+## Deploy Argo CD and onboard rootapp (App Of Apps Pattern)
 
-ArgoCD is deployed as an `Application`, this will allow us to perform future patching of ArgoCD via ArgoCD.
+This section has been deprecated and replaced by three new git repositories:
 
-The `rootapp` will initialize all ArgoCD projects and applications.
+* Argo CD installation and
+  configuration: [https://github.com/wim-vdw/argocd-setup](https://github.com/wim-vdw/argocd-setup)
+* Argo CD application definitions: [https://github.com/wim-vdw/argocd-apps](https://github.com/wim-vdw/argocd-apps)
+* Kubernetes manifests or Helm charts used by Argo CD
+  applications: [https://github.com/wim-vdw/argocd-k8s-resources](https://github.com/wim-vdw/argocd-k8s-resources)
+
+Please refer to the respective repositories for detailed instructions and configurations.
+
+Argo CD is deployed as an `Application`, this will allow us to perform future patching of Argo CD via Argo CD.
+
+The `rootapp` will initialize all Argo CD projects and applications.
 
 Following controllers are part of the `core-apps` and will start synchronizing when `rootapp` gets applied:
 
@@ -13,16 +23,6 @@ Following controllers are part of the `core-apps` and will start synchronizing w
 * `Reloader` controller to watch changes in Kubernetes ConfigMaps and Secrets
 
 The rest of the applications are all tests and are manually synchronized.
-
-```bash
-# Deploy ArgoCD including an "Application" to perform future patching of ArgoCD via ArgoCD.
-cd ./argocd-app/overlays/prd
-kubectl apply -k .
-
-# Onboard rootapp (App Of Apps Pattern).
-cd ./argocd
-kubectl apply -f seeding-root-app.yaml
-```
 
 ## Following fix was needed to ClusterRole argocd-server
 
