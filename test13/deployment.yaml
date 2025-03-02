@@ -20,3 +20,7 @@ spec:
         env:
         - name: TZ
           value: Europe/Brussels
+        command:
+        - /bin/sh
+        - -c
+        - sleep infinity
