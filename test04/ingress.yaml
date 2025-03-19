@@ -4,19 +4,15 @@ metadata:
   name: test04-production
 spec:
   ingressClassName: nginx
-  tls:
-  - hosts:
-    - vdww.duckdns.org
-    secretName: vdww-tls-secret
   rules:
-  - host: vdww.duckdns.org
+  - host: blue-green-prd.192.168.1.11.sslip.io
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: green-svc
+            name: blue-svc
             port:
               number: 80
 ---
@@ -27,17 +23,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: blue-app.local
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: blue-svc
-            port:
-              number: 80
-  - host: blue-app.127.0.0.1.sslip.io
+  - host: blue-app.192.168.1.11.sslip.io
     http:
       paths:
       - path: /
@@ -55,17 +41,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: green-app.local
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: green-svc
-            port:
-              number: 80
-  - host: green-app.127.0.0.1.sslip.io
+  - host: green-app.192.168.1.11.sslip.io
     http:
       paths:
       - path: /
